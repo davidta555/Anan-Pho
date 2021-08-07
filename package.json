@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "lite": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
   },
   "author": "David Ta",
   "license": "ISC",
   "devDependencies": {
     "install": "^0.13.0",
     "lite-server": "^2.6.1",
-    "npm": "^7.20.5"
+    "npm": "^7.20.5",
+    "parallelshell": "^3.0.2"
   }
 }
