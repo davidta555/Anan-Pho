@@ -1,0 +1,17 @@
+{
+  "name": "anan-pho",
+  "version": "1.0.0",
+  "description": "Pho meal kits",
+  "main": "index.js",
+  "scripts": {
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Ta",
+  "license": "ISC",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "lite-server": "^2.6.1",
+    "npm": "^7.20.5"
+  }
+}
