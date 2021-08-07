@@ -4,17 +4,40 @@
   "description": "Pho meal kits",
   "main": "index.js",
   "scripts": {
+    "build": "npm run clean && npm run imagemin && npm run usemin",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin img/* -o dist/img",
     "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
     "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "watch:all": "parallelshell \"npm run lite\""
   },
   "author": "David Ta",
   "license": "ISC",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "imagemin-cli": "^7.0.0",
     "install": "^0.13.0",
     "lite-server": "^2.6.1",
+    "node-sass": "^6.0.1",
     "npm": "^7.20.5",
-    "parallelshell": "^3.0.2"
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.1",
+    "rimraf": "^3.0.2",
+    "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^4.6.0",
+    "boxicons": "^2.0.9",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.6.0",
+    "jquery.easing": "^1.4.1",
+    "jquery.sticky": "^0.2.1",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.16.1",
+    "venobox": "^1.9.3"
   }
 }
